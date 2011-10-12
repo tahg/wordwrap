@@ -25,4 +25,10 @@ public class WrapperTest {
         String subject = Wrapper.wrap("foofoo", 3);
         assertThat(subject, is("foo\nfoo"));
     }
+
+    @Test
+    public void inputLongerThanColReturnsGreaterThanTwoLinesWrappedString() {
+        String subject = Wrapper.wrap("blablabla", 3);
+        assertThat(subject, is("bla\nbla\nbla"));
+    }
 }
