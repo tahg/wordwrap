@@ -31,4 +31,10 @@ public class WrapperTest {
         String subject = Wrapper.wrap("blablabla", 3);
         assertThat(subject, is("bla\nbla\nbla"));
     }
+
+    @Test
+    public void inputLongerThanColStripsTrailingSpaces() {
+        String subject = Wrapper.wrap("foo bar", 3);
+        assertThat(subject, is("foo\nbar"));
+    }
 }

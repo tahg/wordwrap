@@ -12,6 +12,8 @@ public class Wrapper {
         String ret = "";
         int idx = 0;
         for (; idx < input.length() - column; idx += column) {
+            while (Character.isWhitespace(input.charAt(idx))) idx++;
+            if (idx >= input.length() - column) break;
             ret += input.substring(idx, idx + column) + "\n";
         }
         ret += input.substring(idx);
