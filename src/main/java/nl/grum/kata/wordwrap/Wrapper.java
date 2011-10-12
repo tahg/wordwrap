@@ -11,7 +11,7 @@ public class Wrapper {
         if (input.length() <= column)
             return input;
         else {
-            return "foo\nbar";
+            return input.substring(0,column) + "\n" + input.substring(column);
         }
     }
 }

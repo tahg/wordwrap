@@ -19,4 +19,10 @@ public class WrapperTest {
         String subject = Wrapper.wrap("foobar", 3);
         assertThat(subject, is("foo\nbar"));
     }
+
+    @Test
+    public void differentInputLongerThanColReturnsWrappedString() {
+        String subject = Wrapper.wrap("foofoo", 3);
+        assertThat(subject, is("foo\nfoo"));
+    }
 }
