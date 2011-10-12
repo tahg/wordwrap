@@ -8,6 +8,6 @@ public class Wrapper {
      * @return
      */
     public static String wrap(String input, int column) {
-        return null;
+        return input;
     }
 }
