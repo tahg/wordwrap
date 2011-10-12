@@ -13,4 +13,10 @@ public class WrapperTest {
 
         assertThat(subject, is("test"));
     }
+
+    @Test
+    public void inputLongerThanColReturnsWrappedString() {
+        String subject = Wrapper.wrap("foobar", 3);
+        assertThat(subject, is("foo\nbar"));
+    }
 }

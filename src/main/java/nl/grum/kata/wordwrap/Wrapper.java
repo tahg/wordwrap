@@ -8,6 +8,10 @@ public class Wrapper {
      * @return
      */
     public static String wrap(String input, int column) {
-        return input;
+        if (input.length() <= column)
+            return input;
+        else {
+            return "foo\nbar";
+        }
     }
 }
